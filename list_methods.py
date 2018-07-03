@@ -4,10 +4,9 @@ def find_elem(list_of_strings, name_string):
     # if there is a match, return that element
     # if there is no match, return an empty string
     for string in list_of_strings:
-        if string === name_string:
+        if string.lower() == name_string.lower():
             return string
-        else:
-            return ""
+    return ""
 
 
 def find_elem_by(list_of_dictionaries, attribute, value):
@@ -17,11 +16,10 @@ def find_elem_by(list_of_dictionaries, attribute, value):
     # return the dictionary
     # if no match is found, return an empty dictionary
     for dict_elem in list_of_dictionaries:
-        for key in dict_elem:
-            if key == attribute:
+        for key, val in dict_elem.items():
+            if key == attribute and val == value:
                 return dict_elem
-            else:
-                return {}
+    return {}
 
 
 def filter_list(list_of_elements, callback_function):
@@ -32,7 +30,7 @@ def filter_list(list_of_elements, callback_function):
     return [element for element in list_of_elements if callback_function(element)]
 
 
-def max(list_of_numbers):
+def max_elem(list_of_numbers):
     # returns the largest number in the list
     max = list_of_numbers[0]
     for num in list_of_numbers:
@@ -40,7 +38,7 @@ def max(list_of_numbers):
             max = num
     return max
 
-def max_by(list_of_dictionaries, attribute):
+def max_elem_by(list_of_dictionaries, attribute):
     # returns the dictionary with the attribute with the highest value
     max_elem = list_of_dictionaries[0]
     for dict_elem in list_of_dictionaries:
