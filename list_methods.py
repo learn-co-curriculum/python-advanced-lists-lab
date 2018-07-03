@@ -3,10 +3,7 @@ def find_elem(list_of_strings, name_string):
     # that matches the name_string
     # if there is a match, return that element
     # if there is no match, return an empty string
-    for string in list_of_strings:
-        if string.lower() == name_string.lower():
-            return string
-    return ""
+    pass
 
 
 def find_elem_by(list_of_dictionaries, attribute, value):
@@ -15,11 +12,7 @@ def find_elem_by(list_of_dictionaries, attribute, value):
     # find the dictionary whose value matches that which is passed in
     # return the dictionary
     # if no match is found, return an empty dictionary
-    for dict_elem in list_of_dictionaries:
-        for key, val in dict_elem.items():
-            if key == attribute and val == value:
-                return dict_elem
-    return {}
+    pass
 
 
 def filter_list(list_of_elements, callback_function):
@@ -27,35 +20,16 @@ def filter_list(list_of_elements, callback_function):
     # the callback is what determines whether that element should be returned from the filter_list function
     # the callback returns True or False
     # filter_list should return a new list of filtered elements
-    return [element for element in list_of_elements if callback_function(element)]
+    pass
 
 
 def max_elem(list_of_numbers):
     # returns the largest number in the list
-    max = list_of_numbers[0]
-    for num in list_of_numbers:
-        if max < num:
-            max = num
-    return max
-
+    pass
 def max_elem_by(list_of_dictionaries, attribute):
     # returns the dictionary with the attribute with the highest value
-    max_elem = list_of_dictionaries[0]
-    for dict_elem in list_of_dictionaries:
-        if max_elem[attribute] < dict_elem[attribute]:
-            max_elem = dict_elem
-    return max_elem
+    pass
 
 def sort_strings(list_of_strings):
     # returns a list of strings in alphabetical order
-    # remeber the 'a' has a lower value than 'b' or 'c'
-    unsorted_list = list_of_strings
-    sorted_list = []
-    while unsorted_list:
-        first_word = list_of_strings[0]
-        for word in unsorted_list:
-            if first_word > word:
-                first_word = word
-        sorted_list.append(first_word)
-        unsorted_list.remove(first_word)
-    return sorted_list
+    pass
